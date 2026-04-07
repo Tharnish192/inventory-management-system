@@ -1,8 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import inventoryReducer from "./inventorySlice";
+import authReducer from "./authSlice";
 
-export default configureStore({
+const store = configureStore({
   reducer: {
     inventory: inventoryReducer,
+    auth: authReducer,
   },
 });
+
+export default store;
